@@ -145,18 +145,6 @@ $(document).ready(function(){
         }
     });
 
-    // 이미지 슬라이드
-
-//    <a href="javascript:;" class="btn_slide btn_prev">왼쪽으로 넘기기</a>
-//    <a href="javascript:;" class="btn_slide btn_next">오른쪽으로 넘기기</a>
-
-    Flipsnap('ul.list_slide', {
-        distance : '100%'
-    });
-
-
-
-
 
 
 
