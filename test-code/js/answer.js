@@ -35,28 +35,29 @@ function changeimg (item){
         str += "<\/a><\/li>";
 
         $('ul.list_friends').html(str);
-
     }
 }
+
+$(function(){
+    $('.btn_nav').click(function(){
+        $('.wrap_gnb').animate({ left :'100%'});
+    });
+});
+$(function(){
+    $(document).click(function(e){
+        if(!$(e.target).is('.btn_nav')){
+            $('.wrap_gnb').animate({ left :'-100%'});
+        }
+    });
+});
 
 changeimg(item);
 
 $(document).ready(function(){
 
     // 메뉴 창
-    $('div.wrap_btn_nav').click(function(e){
-
-        $('div.wrap_nav').animate({ left : "100%"});
-        e.stopPropagation();
-    });
-    $(document).click(function(e2){
-        $('div.wrap_nav').animate({left : "-100%"});
-        e2.stopPropagation();
-    });
 
     // 캐릭터 상품
-
-
     $('span.total_number').html(STORE.라이언.length);
     console.log(cnt);
     //changeimg(item);
